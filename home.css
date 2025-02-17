@@ -1,0 +1,85 @@
+.navbar-custom {
+    background-color: #5DD9F2;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 150px;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-icons i {
+    font-size: 20px;
+}
+
+.home-button {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .nav-icons {
+        display: none;
+    }
+    .home-button {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-custom {
+        padding: 5px;
+    }
+    .navbar-brand {
+        font-size: 18px;
+    }
+    .search-bar input {
+        width: 120px;
+    }
+}
+
+/* Additional styles for icon and text alignment */
+.icon-text-container {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.icon-text-container i,
+.icon-text-container svg {
+    margin-bottom: 5px; /* Space between icon and text */
+}
