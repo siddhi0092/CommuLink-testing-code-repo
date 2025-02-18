@@ -15,12 +15,14 @@
     background: white;
     border-radius: 20px;
     padding: 5px 10px;
+    width: 500px; /* Adjust the width as needed */
 }
 
 .search-bar input {
     border: none;
     outline: none;
-    width: 150px;
+    width: 100%; /* Make the input take the full width of the search bar */
+    padding: 5px; /* Add some padding for better appearance */
 }
 
 .nav-icons a {
@@ -82,4 +84,9 @@
 .icon-text-container i,
 .icon-text-container svg {
     margin-bottom: 5px; /* Space between icon and text */
+}
+
+.rounded {
+    border-radius: 10px; /* Adjust the value as needed */
+    padding: 5px 10px; /* Optional: Add some padding for better appearance */
 }
