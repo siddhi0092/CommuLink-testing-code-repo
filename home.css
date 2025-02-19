@@ -3,6 +3,9 @@
     padding: 10px;
 }
 
+.custom-font-size {
+    font-size: 3rem; /* Adjust the size as needed */
+}
 .navbar-brand {
     font-weight: bold;
     font-size: 20px;
@@ -15,14 +18,14 @@
     background: white;
     border-radius: 20px;
     padding: 5px 10px;
-    width: 500px; /* Adjust the width as needed */
+    width: 500px;
 }
 
 .search-bar input {
     border: none;
     outline: none;
-    width: 100%; /* Make the input take the full width of the search bar */
-    padding: 5px; /* Add some padding for better appearance */
+    width: 100%;
+    padding: 5px;
 }
 
 .nav-icons a {
@@ -43,12 +46,11 @@
     background: white;
     padding: 10px;
     border-radius: 10px;
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* For responsiveness */
 @media (max-width: 768px) {
     .search-bar {
         width: 100%;
@@ -74,19 +76,199 @@
     }
 }
 
-/* Additional styles for icon and text alignment */
 .icon-text-container {
     display: flex;
-    flex-direction: column; /* Stack icon and text vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .icon-text-container i,
 .icon-text-container svg {
-    margin-bottom: 5px; /* Space between icon and text */
+    margin-bottom: 5px;
 }
 
 .rounded {
-    border-radius: 10px; /* Adjust the value as needed */
-    padding: 5px 10px; /* Optional: Add some padding for better appearance */
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.p-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: column-reverse;
+}
+
+.both-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    order: -1;
+    flex: none;
+    margin-left: -110px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.both-cards .card-body {
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.main-title {
+    position: relative;
+        text-align: center;
+        font-size: 2rem;
+        white-space: pre-line;
+        min-height: 3rem;
+}
+
+.typing-text {
+    position: absolute;
+    width: 100%;
+    border-right: 2px solid black; /* Cursor effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide the text that is not yet visible */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@media (min-width: 768px) {
+    .p-5 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .both-cards {
+        flex-direction: column;
+        align-items: flex-start;
+        flex: none;
+        margin-left: -130px;
+
+    }
+
+    .both-cards .card-body {
+    }
+
+    .main-title {
+        align-self: center;
+        font-size: 3rem;
+        min-height: 4rem;
+        width: 50%;
+        margin-top: -90px;
+    }
+}
+/* Decorative shapes around the title */
+.main-title::before, .main-title::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    background-color: #65FDD9;
+    border-radius: 50%;
+    animation: floatShapes 5s infinite linear;
+}
+
+.main-title::before {
+    top: -15px; /* Adjusted to be very close to the top of the typing text */
+    left: -15px; /* Adjusted to be very close to the left of the typing text */
+    animation-delay: 0s;
+}
+
+.main-title::after {
+    bottom: -15px; /* Adjusted to be very close to the bottom of the typing text */
+    right: -15px; /* Adjusted to be very close to the right of the typing text */
+    animation-delay: 1s;
+}
+
+/* Additional decorative shapes */
+.main-title .extra-shape-1, 
+.main-title .extra-shape-2,
+.main-title .extra-shape-3,
+.main-title .extra-shape-4 {
+    content: "";
+    position: absolute;
+    background-color: #FFC16B;
+    animation: floatShapes 6s infinite linear;
+}
+
+.main-title .extra-shape-1 {
+    top: -15px; /* Adjusted to be very close to the top of the typing text */
+    left: 15px; /* Adjusted to be very close to the left of the typing text */
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    border-radius: 50%;
+    animation-delay: 1.5s;
+}
+
+.main-title .extra-shape-2 {
+    bottom: -15px; /* Adjusted to be very close to the bottom of the typing text */
+    right: 15px; /* Adjusted to be very close to the right of the typing text */
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    border-radius: 50%;
+    animation-delay: 2s;
+}
+
+.main-title .extra-shape-3 {
+    top: -15px; /* Adjusted to be very close to the top of the typing text */
+    right: -15px; /* Adjusted to be very close to the right of the typing text */
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation-delay: 2.5s;
+}
+
+.main-title .extra-shape-4 {
+    bottom: -15px; /* Adjusted to be very close to the bottom of the typing text */
+    left: -15px; /* Adjusted to be very close to the left of the typing text */
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation-delay: 3s;
+}
+
+@keyframes floatShapes {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5px, -5px); }
+    50% { transform: translate(-5px, 5px); }
+    75% { transform: translate(-5px, -5px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Blogs and Updates Section */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-10px); /* Lift the card slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+.card {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure images don't overflow */
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the image */
+}
+
+.card-body {
+    padding: 1.5rem; /* Add some padding inside the card */
+}
+
+.btn-primary {
+    background-color: #5DD9F2; /* Match the navbar color */
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4CA8C2; /* Darker shade on hover */
 }
